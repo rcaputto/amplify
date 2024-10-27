@@ -1,0 +1,294 @@
+/*INICIO NAVBAR*/
+*{
+  font-size: Poppins;
+}
+#navbar{
+    background: rgb(26,26,28);
+    background: linear-gradient(63deg, rgba(26,26,28,1) 58%, rgba(50,50,84,1) 99%, rgba(33,37,38,1) 100%);
+}
+
+.navbar {
+  background-color: transparent !important;
+  border: none;
+}
+.navbar-brand {
+  color: white !important;
+  font-weight:lighter;
+  font-size: 1.6rem;
+}
+
+/* Estilo para el botón */
+.btn-menu {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  font-weight:lighter;
+}
+
+/* Estilo del Offcanvas para que no cubra el fondo */
+.offcanvas-start {
+  width: 250px;
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.85); /* Fondo semi-transparente oscuro */
+}
+
+/* Transición suave cuando el menú se abre */
+.offcanvas {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Color del texto de los enlaces en el menú */
+.offcanvas-body .nav-link {
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+/* Remover sombra y fondo del botón de cierre */
+.btn-close {
+  filter: invert(1); /* Hacer el icono de cierre blanco */
+}
+
+/* Asegurarse de que el menú no oscurezca el contenido */
+.offcanvas-backdrop {
+  display: none !important;
+}
+
+/*FIN NAVBAR*/
+
+/*BODY*/
+
+main{
+  background-image: url(./images/monkey-3507317_1280.jpg);
+  background-size: cover; /* Hace que la imagen cubra todo el área visible */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  /*background-attachment: fixed;  Fija la imagen para que no se mueva al hacer scroll */
+  min-height: 90vh; /* La sección del body ocupa toda la altura de la pantalla */
+  opacity: 0.9; /* Opacidad de la imagen */
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+section#inicio {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.hero {
+  text-align: right;
+  width: 35%;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #EBF5EE;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #EBF5EE;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #EBF5EE;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Estilos para pantallas superiores a 1010px */
+@media (min-width: 1010px) {
+  .hero h1 {
+    font-size: 4rem;
+    
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  .cta {
+    font-size: 1.25rem;
+    padding: 12px 24px;
+  }
+}
+
+/* Estilos para tablets (pantallas entre 768px y 1010px) */
+@media (min-width: 768px) and (max-width: 1010px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .cta {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Estilos para móviles (pantallas menores a 768px) */
+@media (max-width: 768px) {
+  .btn-menu {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight:lighter;
+  }
+
+  .navbar-brand {
+    color: white !important;
+    font-weight:lighter;
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    margin-right: 1rem;
+  }
+ 
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+
+
+  /*FIN BODY*/
+
+  /*BOTON*/
+
+  .cta {
+    display: inline-block; /* Hace que el enlace se comporte como un botón */
+    background-color: #ff5733; /* Color de fondo llamativo (naranja) */
+    color: white; /* Color del texto */
+    padding: 15px 30px; /* Relleno interior del botón */
+    font-size: 18px; /* Tamaño del texto */
+    text-align: center; /* Centra el texto */
+    text-decoration: none; /* Elimina el subrayado */
+    border-radius: 8px; /* Bordes redondeados */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    transition: all 0.3s ease; /* Suaviza la transición de los efectos */
+}
+
+.cta:hover {
+    background-color: #c13b1a; /* Cambia el color de fondo cuando el ratón pasa sobre el botón */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Aumenta la sombra para hacer que parezca elevado */
+    transform: translateY(-3px); /* Levanta ligeramente el botón */
+    color: #ffffff; /* Asegura que el texto siga siendo visible en hover */
+}
+
+.cta:active {
+    transform: translateY(1px); /* Botón parece presionado */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Disminuye la sombra cuando se hace clic */
+}
+
+/*FIN BOTON*/
+
+/*CARROUSEL*/
+/* Ajusta la altura del carrusel para que ocupe toda la pantalla */
+#carouselExampleCaptions {
+  margin-top: 2rem;
+    height: 90vh; /* Ocupa el 100% de la altura de la ventana */
+    overflow: hidden; /* Asegura que no haya scroll */
+    
+}
+
+/* Ajusta las imágenes del carrusel */
+.carousel-item img {
+  height: 400px; /* Define la altura deseada */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Opcional: Ajusta la posición de los textos (títulos y subtítulos) en el carrusel */
+.carousel-caption {
+    bottom: 20%; /* Baja la posición del texto en el carrusel */
+}
+
+.carousel-caption h5 {
+    font-size: 36px; /* Ajusta el tamaño del título */
+    font-weight: bold;
+    color: white; /* Asegura que el texto sea legible */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Agrega una sombra al texto para mejorar la legibilidad */
+}
+
+.carousel-caption p {
+    font-size: 18px; /* Ajusta el tamaño del subtítulo */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .carousel-caption h5 {
+        font-size: 24px; /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+    
+    .carousel-caption p {
+        font-size: 14px; /* Reduce el tamaño del subtítulo en pantallas pequeñas */
+    }
+
+    .cards{
+      display: flex;
+      flex-direction: column;
+    }
+    .card{
+      
+    }
+    
+}
+
+/*FIN CARROUSEL*/
+
+/*SERVICIOS*/
+#servicios{
+  margin-top: 2rem;
+}
+
+#servicios h2{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#servicios p{
+  text-align: justify;
+  font-size: 18px;
+  margin: 1rem;
+}
+
+.card{
+  width: 25rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+}
+
+.card .monoI{
+  height: 25rem !important;
+  object-fit:cover !important;
+} 
+
