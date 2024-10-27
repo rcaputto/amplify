@@ -62,7 +62,7 @@
 main{
   background-image: url(./images/monkey-3507317_1280.jpg);
   background-size: cover; /* Hace que la imagen cubra todo el área visible */
-  background-position: center; /* Centra la imagen */
+  background-position:left; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   /*background-attachment: fixed;  Fija la imagen para que no se mueva al hacer scroll */
   min-height: 90vh; /* La sección del body ocupa toda la altura de la pantalla */
