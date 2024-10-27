@@ -111,7 +111,9 @@ section#inicio {
 /* Estilos para pantallas superiores a 1010px */
 @media (min-width: 1010px) {
   .hero h1 {
-    font-size: 4rem;
+    font-size: 6rem;
+    font-weight: bold;
+    color: black;
     
   }
 
