@@ -60,9 +60,9 @@
 /*BODY*/
 
 main{
-  background-image: url(./images/monkey-3507317_1280.jpg);
+  background-image: url(./images/monkey.jpg);
   background-size: cover; /* Hace que la imagen cubra todo el área visible */
-  background-position:left; /* Centra la imagen */
+  background-position:top; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   /*background-attachment: fixed;  Fija la imagen para que no se mueva al hacer scroll */
   min-height: 90vh; /* La sección del body ocupa toda la altura de la pantalla */
@@ -111,7 +111,7 @@ section#inicio {
 /* Estilos para pantallas superiores a 1010px */
 @media (min-width: 1010px) {
   .hero h1 {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: bold;
     color: black;
     
@@ -286,7 +286,8 @@ section#inicio {
 .card{
   width: 25rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
 }
 
 .card .monoI{
