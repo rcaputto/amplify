@@ -1,21 +1,89 @@
 /*INICIO NAVBAR*/
 *{
-  font-size: Poppins;
-}
-#navbar{
+  font-size: Poppins;}
+  #navbar {
     background: rgb(26,26,28);
     background: linear-gradient(63deg, rgba(26,26,28,1) 58%, rgba(50,50,84,1) 99%, rgba(33,37,38,1) 100%);
-}
-
-.navbar {
-  background-color: transparent !important;
-  border: none;
-}
-.navbar-brand {
-  color: white !important;
-  font-weight:lighter;
-  font-size: 1.6rem;
-}
+    padding: 0.5rem 2rem;
+    
+  }
+  
+  .navbar {
+    background-color: transparent !important;
+    border: none;
+    padding: 0; /* Ajuste de padding para un ajuste limpio */
+    
+  }
+  
+  .navbar-brand {
+    color: white !important;
+    font-weight: lighter;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .navbar-brand img {
+    margin-right: 10px; /* Espacio entre los logotipos */
+  }
+  
+  #logo {
+    width: 60px; /* Tamaño más pequeño para el logo mono */
+  }
+  
+  #logo + img {
+    width: 120px; /* El logo principal será más grande */
+  }
+  
+  .btn-menu {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-menu:hover {
+    background-color: rgba(0, 123, 255, 0.2);
+    cursor: pointer;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: white; /* Icono de menú en color blanco */
+  }
+  
+  /* Estilos para pantallas grandes */
+  @media (min-width: 1010px) {
+    .navbar-brand {
+      font-size: 2rem; /* Aumenta el tamaño del nombre del logo en pantallas grandes */
+    }
+  
+    .btn-menu {
+      font-size: 1.5rem;
+    }
+    .navbar{
+      height: 4.8rem;
+    }
+  }
+  
+  /* Estilos para móviles (pantallas menores a 768px) */
+  @media (max-width: 768px) {
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+    
+  
+    .btn-menu {
+      font-size: 1.1rem;
+    }
+  }
+  
 
 /* Estilo para el botón */
 .btn-menu {
@@ -59,110 +127,117 @@
 
 /*BODY*/
 
-main{
-  background-image: url(./images/monkey.jpg);
-  background-size: cover; /* Hace que la imagen cubra todo el área visible */
-  background-position:top; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  /*background-attachment: fixed;  Fija la imagen para que no se mueva al hacer scroll */
-  min-height: 90vh; /* La sección del body ocupa toda la altura de la pantalla */
-  opacity: 0.9; /* Opacidad de la imagen */
-  margin: 0;
-  margin-bottom: 2rem;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Estilos generales */
+/* Estilo general de la sección */
 section#inicio {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 100vh;
   padding: 0 20px;
+  background-image: url(./images/monkey.jpg);
+  background-size: cover;
+  background-position: center center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat;
+  min-height: 90vh;
+  opacity: 0.9;
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Estilos del contenedor hero */
 .hero {
   text-align: right;
-  width: 35%;
+  width: 40%;
+  margin-right: 6rem;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Sombra para destacar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  height: 100vh;
 }
 
+/* Estilo del título */
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #EBF5EE;
+  font-size: 3.5rem;
+  margin-top: 1.5rem;
+  color: #F8E2E2;
+  font-weight: bold;
+  line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Sombra para mayor impacto */
 }
 
+/* Estilo del párrafo */
 .hero p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #EBF5EE;
+  color: #F8E2E2;
+  font-weight: 300;
 }
 
+/* Estilo del botón */
 .cta {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 28px;
   background-color: #007bff;
-  color: #EBF5EE;
+  color: #F8E2E2;
   text-decoration: none;
   border-radius: 5px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #0056b3;
+  transform: translateY(-4px);
 }
 
 /* Estilos para pantallas superiores a 1010px */
 @media (min-width: 1010px) {
   .hero h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: black;
-    
+    font-size: 5rem;
   }
 
   .hero p {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .cta {
-    font-size: 1.25rem;
-    padding: 12px 24px;
+    font-size: 1.35rem;
+    padding: 14px 30px;
   }
 }
 
 /* Estilos para tablets (pantallas entre 768px y 1010px) */
 @media (min-width: 768px) and (max-width: 1010px) {
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .hero p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 
   .cta {
-    font-size: 1rem;
-    padding: 10px 20px;
+    font-size: 1.1rem;
+    padding: 12px 24px;
   }
 }
 
 /* Estilos para móviles (pantallas menores a 768px) */
 @media (max-width: 768px) {
-  .btn-menu {
-    color: white;
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    font-weight:lighter;
-  }
-
-  .navbar-brand {
-    color: white !important;
-    font-weight:lighter;
-    font-size: 1.2rem;
-  }
-
   .hero {
-    margin-right: 1rem;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
   }
- 
+
   .hero h1 {
     font-size: 2rem;
   }
@@ -172,10 +247,11 @@ section#inicio {
   }
 
   .cta {
-    font-size: 0.9rem;
-    padding: 8px 16px;
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }
+
 
 
 
@@ -183,31 +259,64 @@ section#inicio {
 
   /*BOTON*/
 
-  .cta {
-    display: inline-block; /* Hace que el enlace se comporte como un botón */
-    background-color: #ff5733; /* Color de fondo llamativo (naranja) */
-    color: white; /* Color del texto */
-    padding: 15px 30px; /* Relleno interior del botón */
-    font-size: 18px; /* Tamaño del texto */
-    text-align: center; /* Centra el texto */
-    text-decoration: none; /* Elimina el subrayado */
-    border-radius: 8px; /* Bordes redondeados */
-    font-weight: bold; /* Hace que el texto sea más grueso */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
-    transition: all 0.3s ease; /* Suaviza la transición de los efectos */
+/* Estilo del botón fuera de la sección */
+.cta {
+  width: 50%;
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #007bff;
+  color: #F8E2E2;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 2 rem;
+  font-weight: 500;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 2rem; /* Espacio superior */
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; /* Centra el botón en su contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra para darle profundidad */
+  border: 2px solid #007bff; /* Añade borde del mismo color que el fondo */
 }
 
+/* Efecto hover */
 .cta:hover {
-    background-color: #c13b1a; /* Cambia el color de fondo cuando el ratón pasa sobre el botón */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Aumenta la sombra para hacer que parezca elevado */
-    transform: translateY(-3px); /* Levanta ligeramente el botón */
-    color: #ffffff; /* Asegura que el texto siga siendo visible en hover */
+  background-color: #0056b3;
+  transform: translateY(-4px); /* Le da un pequeño "salto" al pasar el ratón */
 }
 
-.cta:active {
-    transform: translateY(1px); /* Botón parece presionado */
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Disminuye la sombra cuando se hace clic */
+/* Efecto focus */
+.cta:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.7); /* Efecto de enfoque más visible */
 }
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1010px) {
+  .cta {
+    font-size: 1.5rem;
+    padding: 14px 32px;
+  }
+}
+
+/* Estilos para tablets (pantallas entre 768px y 1010px) */
+@media (min-width: 768px) and (max-width: 1010px) {
+  .cta {
+    font-size: 1.3rem;
+    padding: 12px 28px;
+  }
+}
+
+/* Estilos para móviles (pantallas menores a 768px) */
+@media (max-width: 768px) {
+  .cta {
+    font-size: 1.1rem;
+    padding: 10px 24px;
+  }
+}
+
 
 /*FIN BOTON*/
 
@@ -258,40 +367,381 @@ section#inicio {
       display: flex;
       flex-direction: column;
     }
-    .card{
-      
-    }
+   
     
 }
 
 /*FIN CARROUSEL*/
 
 /*SERVICIOS*/
-#servicios{
+#servicios {
   margin-top: 2rem;
+  padding: 2rem;
+  background-color: #f7f7f7; /* Fondo suave para resaltar la sección */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#servicios h2{
-  font-size: 40px;
+#servicios h2 {
+  font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+#servicios p {
+  text-align: justify;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  color: #555;
+  padding: 1rem;
+  background-color: #fff; /* Fondo blanco para el párrafo */
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las tarjetas */
+.card {
+  width: 100%;
+  max-width: 25rem; /* Mantiene el ancho de las tarjetas */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 25rem; /* Mantiene la altura fija de las imágenes */
+  width: 100%;
+  object-fit:cover;
+}
+
+.card-body {
+  padding: 1.5rem;
+  background-color: #ffffff;
+}
+
+.card h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.card .card-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+  background-color: #f3f3f3;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.proyectos {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.proyectos::after {
+  content: "";
+  width: 5rem;
+  height: 4px;
+  background-color: #007bff; /* Color destacado para captar atención */
+  display: block;
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+/* Ajustes de responsividad */
+@media (max-width: 768px) {
+  .proyectos {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Cards tarjetas de servicios*/
+
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 25rem; /* Fija un tamaño uniforme para las tarjetas */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Suaviza la sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  background-color: #ffffff;
+  margin: 8px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  height: 12rem; /* Mantiene las imágenes de las tarjetas del mismo tamaño */
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin-top: 2px;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.text-body-secondary {
+  display: block;
+  font-size: 0.85rem;
+  color: #999999;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+  }
+}
+
+/* About us */
+
+.aboutUs {
+  padding: 3rem 0;
+  background-color: #f9f9f9; /* Fondo suave para diferenciar la sección */
+}
+
+.aboutUs-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+
+.aboutUs-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555555;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.aboutUs-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra para destacar la imagen */
+  transition: transform 0.3s ease;
+}
+
+.aboutUs-img:hover {
+  transform: scale(1.05); /* Efecto de acercamiento al pasar el ratón */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 992px) {
+  .aboutUs {
+    text-align: center;
+  }
+
+  .aboutUs-title {
+    font-size: 2rem;
+  }
+
+  .aboutUs-text {
+    font-size: 1rem;
+    text-align: center; /* Centrado en pantallas pequeñas */
+  }
+
+  .aboutUs-img {
+    margin-top: 2rem;
+  }
+}
+
+/* CONTACT */
+
+.contact {
+  padding: 3rem 0;
+  background-color: #f3f4f6; /* Color de fondo suave */
+}
+
+.contact h1 {
+  font-size: 2.5rem;
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #555555;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.contact .col-lg-6:first-child {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact .col-lg-6:last-child {
+  padding: 2rem;
+}
+
+.contact .col-lg-6 h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333333;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 992px) {
+  .contact {
+    text-align: center;
+  }
+
+  .contact .col-lg-6 {
+    margin-top: 2rem;
+  }
+
+  .contact h1 {
+    font-size: 2rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #333333; /* Fondo oscuro elegante */
+  color: #ffffff; /* Texto claro para contraste */
+  padding: 3rem 0;
+}
+
+.footer-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
-#servicios p{
-  text-align: justify;
-  font-size: 18px;
-  margin: 1rem;
+
+.footer-text {
+  font-size: 1rem;
+  color: #cccccc; /* Color de texto secundario */
+  line-height: 1.6;
+  max-width: 500px;
 }
 
-.card{
-  width: 25rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin: 0.5rem;
+.footer .col-lg-6 {
+  padding: 1rem 2rem;
 }
 
-.card .monoI{
-  height: 25rem !important;
-  object-fit:cover !important;
-} 
+/* Redes Sociales */
+.footer .social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footer .social-icons a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #007bff; /* Color de hover atractivo */
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .footer-title {
+    font-size: 1.5rem;
+  }
+  
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}
 
