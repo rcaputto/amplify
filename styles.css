@@ -352,27 +352,35 @@ section#inicio {
 }
 
 .carousel-caption h5 {
-    font-size: 36px; /* Ajusta el tamaño del título */
-    font-weight: bold;
-    color: white; /* Asegura que el texto sea legible */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Agrega una sombra al texto para mejorar la legibilidad */
+  font-size: 42px; /* Aumenta el tamaño del título */
+  font-weight: bold;
+  color: #FFA500; /* Cambia a un tono dorado para más contraste */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* Sombra más grande y difusa */
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+  border-radius: 8px; /* Bordes redondeados */
 }
 
 .carousel-caption p {
-    font-size: 18px; /* Ajusta el tamaño del subtítulo */
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 25px; /* Ajusta el tamaño del subtítulo */
+  color: #B0B0B0; /* Mantén el color blanco para el texto */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Sombra más pronunciada */
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
+  padding: 8px 12px;
+  border-radius: 6px;
+  max-width: 80%; /* Limita el ancho del texto */
+  margin: 0 auto; /* Centra el texto */
 }
 
 /* Media Queries para pantallas más pequeñas */
 @media (max-width: 768px) {
-    .carousel-caption h5 {
-        font-size: 24px; /* Reduce el tamaño del título en pantallas pequeñas */
-    }
-    
-    .carousel-caption p {
-        font-size: 14px; /* Reduce el tamaño del subtítulo en pantallas pequeñas */
-    }
+  .carousel-caption h5 {
+    font-size: 28px; /* Reduce el tamaño del título en pantallas pequeñas */
+}
+
+.carousel-caption p {
+    font-size: 16px; /* Reduce el tamaño del subtítulo en pantallas pequeñas */
+}
 
     .cards{
       display: flex;
@@ -473,6 +481,14 @@ section#inicio {
   border-radius: 2px;
 }
 
+.aboutUs-title::after{
+  content: "";
+  width: 5rem;
+  height: 4px;
+  background-color: #007bff; /* Color destacado para captar atención */
+  display: block;
+  border-radius: 2px;
+}
 h2 {
   font-size: 1.5rem;
   font-weight: 300;
