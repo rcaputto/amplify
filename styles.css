@@ -22,6 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    
   }
   
   .navbar-brand img {
@@ -30,10 +31,6 @@
   
   #logo {
     width: 60px; /* Tamaño más pequeño para el logo mono */
-  }
-  
-  #logo + img {
-    width: 120px; /* El logo principal será más grande */
   }
   
   .btn-menu {
@@ -63,7 +60,10 @@
     .navbar-brand {
       font-size: 2rem; /* Aumenta el tamaño del nombre del logo en pantallas grandes */
     }
-  
+    #logo + img {
+      display: inline;
+      width: 100px ;
+    }
     .btn-menu {
       font-size: 1.5rem;
     }
@@ -76,14 +76,19 @@
   @media (max-width: 768px) {
     .navbar-brand {
       font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    #logo + img {
+      display: inline;
+      width: 70px ;
     }
     
-    .navbar-brand img{
+    #logo  {
       display: none;
     }
 
     .navbar{
-      height: 3.8rem;
+      height: 4rem;
     }
     .btn-menu {
       font-size: 1.1rem;
