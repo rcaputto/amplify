@@ -78,7 +78,13 @@
       font-size: 1.5rem;
     }
     
-  
+    .navbar-brand img{
+      display: none;
+    }
+
+    .navbar{
+      height: 3.8rem;
+    }
     .btn-menu {
       font-size: 1.1rem;
     }
