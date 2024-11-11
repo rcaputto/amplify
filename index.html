@@ -337,29 +337,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    
-    <script type="text/javascript">
-  (function() {
-    // Inicializa EmailJS con tu User ID (lo encontrarás en tu cuenta de EmailJS)
-    emailjs.init("DvDpVLY-_ncD7Koz8");
-  })();
-
-  // Captura el envío del formulario
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    // Manda el formulario usando EmailJS
-    emailjs.sendForm('service_an7bvpr', 'template_brjguev', this)
-      .then(function(response) {
-         console.log('Correo enviado con éxito!', response.status, response.text);
-        
-      }, function(error) {
-         console.error('Ocurrió un error al enviar el correo:', error);
-         alert("Ocurrió un error al enviar el mensaje. Por favor, intenta de nuevo.");
-      });
-  });
-</script>
-<script src = "./index.js"></script>
+    <script src = "./index.js"></script>
 
     
 </body>
