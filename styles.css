@@ -813,4 +813,40 @@ h2 {
   to { opacity: 1; }
 }
 
+/* Estilo para la flecha */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff; /* Fondo azul */
+  color: white;
+  border-radius: 50%; /* Hace que el fondo tenga forma circular */
+  padding: 12px;
+  font-size: 24px; /* Tamaño de la flecha */
+  cursor: pointer;
+  display: none; /* Oculta la flecha por defecto */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para la flecha */
+  z-index: 9999; /* Asegura que la flecha esté por encima de otros elementos */
+  transition: opacity 0.3s ease;
+}
+
+/* Cambia el color de fondo cuando pasa el mouse por encima */
+.scroll-to-top:hover {
+  background-color: #0056b3;
+}
+
+/* Aseguramos que la flecha siempre esté por encima de otros elementos */
+.scroll-to-top i {
+  pointer-events: none; /* Evita que el icono sea clickeado directamente */
+}
+
+/* Mostrar la flecha solo en pantallas grandes */
+@media (min-width: 992px) {
+  .scroll-to-top {
+      display: none; /* Inicialmente está oculta */
+  }
+}
+
+
+
 
