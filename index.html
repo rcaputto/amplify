@@ -265,40 +265,48 @@
   </section>
 
   <section class="contact" id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-12 col-sm-12">
-        <form id="contactForm">
-          <div class="mb-3">
-            <label for="name" class="form-label">Nombre o Apodo</label>
-            <input type="text" class="form-control" id="name" name="from_name" placeholder="Tu nombre">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" name="from_email" placeholder="email@email.com">
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Cómo podemos ayudarte?</label>
-            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-      </div>
-      <div class="col-lg-6 col-md-12 col-sm-12">
-        <h1>Otras formas de contacto</h1>
-        <p class="contact-text">Puedes encontrarnos en las redes sociales de la empresa o escribirnos por correo electrónico. Estamos para ayudarte. ¡Gracias por contactarnos!</p>
-        <div class="telephone" style="margin-left: 16px;">
-          <img src="./images/telefono.png" alt="telefono" style="width: 25px; height: 25px;">
-          <span style="margin-left: 16px;">+34 685 52 50 63</span>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre o Apodo</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="email@email.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">¿Cómo podemos ayudarte?</label>
+                        <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <h1>Otras formas de contacto</h1>
+                <p class="contact-text">Puedes encontrarnos en redes sociales o escribirnos por correo. ¡Gracias por contactarnos!</p>
+                <div class="telephone" style="margin-left: 16px;">
+                    <img src="./images/telefono.png" alt="teléfono" style="width: 25px; height: 25px;">
+                    <span style="margin-left: 16px;">+34 685 52 50 63</span>
+                </div>
+                <div class="email">
+                    <img src="./images/mail.png" alt="email" style="width: 25px; height: 25px;">
+                    <span style="margin-left: 16px;">evolutionstudioweb@gmail.com</span>
+                </div>
+            </div>
         </div>
-        <div class="email">
-          <img src="./images/mail.png" alt="email" style="width: 60px; height: 60px;">
-          evolutionstudioweb@gmail.com
-        </div>
-      </div>
     </div>
-  </div>
+    <!-- Modal de confirmación -->
+    <div id="modalConfirmacion" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>¡Mensaje enviado con éxito!</p>
+        </div>
+    </div>
 </section>
+
 
 
   <section class="footer">
@@ -351,6 +359,7 @@
       });
   });
 </script>
+<script src = "./index.js"></script>
 
     
 </body>
